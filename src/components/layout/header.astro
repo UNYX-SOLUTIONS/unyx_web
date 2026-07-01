@@ -1,13 +1,14 @@
 ---
 // src/components/layout/Header.astro
-import { navigation } from '../../data/navigation.js';
+import { navigation } from '../../data/navigation';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-brand-primary/90 backdrop-blur-custom border-b border-cyan-500/10">
-  <div class="container-custom">
+  <!-- ✅ Contenedor con límite de ancho -->
+  <div class="container">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href="/" class="flex items-center gap-2 group shrink-0">
         <div class="w-9 h-9 md:w-10 md:h-10 bg-cyan-500 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 group-hover:shadow-glow-cyan">
           <span class="text-white font-display font-bold text-lg md:text-xl">U</span>
         </div>

@@ -1,6 +1,6 @@
 ---
 // src/layouts/Layout.astro
-import '@styles/globals.css';
+import '../../src/styles/global.css';
 
 export interface Props {
   title?: string;
@@ -48,7 +48,10 @@ const {
     />
   </head>
   <body>
-    <slot />
+    <!-- ✅ Envolvemos todo en un contenedor -->
+    <div class="container">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -64,5 +67,28 @@ const {
   body {
     width: 100%;
     min-height: 100%;
+  }
+
+  /* ✅ Asegurar que el contenedor funcione */
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 </style>
