@@ -2,9 +2,12 @@
 // src/components/sections/Services.astro
 import { services } from '../../data/services.js';
 ---
-
-<section class="py-16 md:py-24 bg-brand-secondary">
-  <div class="container-custom">
+<!-- Sección de Servicios 
+  En esta seccion debe ocupar todo el ancho de la pantalla, por lo que no se utiliza el contenedor personalizado.
+-->
+ 
+<section class="py-16 md:py-24 bg-brand-secondary relative overflow-hidden">
+  <div class="container-custom container">
     <!-- Encabezado -->
     <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
       <span class="badge-cyan mb-4">Servicios</span>

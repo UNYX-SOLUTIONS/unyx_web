@@ -150,12 +150,16 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   @media (min-width: 640px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -163,6 +167,8 @@
     .container {
       padding-left: 2rem;
       padding-right: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -173,12 +179,16 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   @media (min-width: 640px) {
     .container-custom {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -186,6 +196,8 @@
     .container-custom {
       padding-left: 2rem;
       padding-right: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
   }
 
