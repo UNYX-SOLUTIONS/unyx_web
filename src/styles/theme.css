@@ -1,64 +1,87 @@
-/* Tema principal de Uny Solutions */
+/* theme.css - Versión optimizada */
 :root {
-  /* Colores Base - Navy + Cyan */
-  --color-primary: #010310;
-  --color-secondary: #0A1628;
-  --color-accent: #23A9BD;
-  --color-accent-light: #4DC9DD;
-  --color-accent-dark: #1A8A9E;
+  /* Navy */
+  --color-navy-950: #010310;
+  --color-navy-900: #0A1220;
+  --color-navy-800: #16253E;
+  --color-navy-700: #22375D;
+  --color-navy-600: #2E4A7C;
+  --color-navy-500: #3A5C9B;
+  --color-navy-400: #5C79AD;
+  --color-navy-300: #7F96BF;
+  --color-navy-200: #A2B3D1;
+  --color-navy-100: #C5D0E3;
+  --color-navy-50: #E8EDF5;
+
+  /* Cyan */
+  --color-cyan-900: #062B32;
+  --color-cyan-800: #0D4B56;
+  --color-cyan-700: #136A7A;
+  --color-cyan-600: #1A8A9E;
+  --color-cyan-500: #23A9BD;
+  --color-cyan-400: #2EB3C6;
+  --color-cyan-300: #5CC4D3;
+  --color-cyan-200: #8AD5E0;
+  --color-cyan-100: #B8E6ED;
+  --color-cyan-50: #E6F7FA;
+
+  /* Brand (Usa referencias a los colores base) */
+  --color-primary: var(--color-navy-950);
+  --color-secondary: var(--color-navy-900);
+  --color-accent: var(--color-cyan-500);
+  --color-accent-light: var(--color-cyan-400);
+  --color-accent-dark: var(--color-cyan-600);
   --color-accent-glow: #23A9BD33;
 
-  /* Fondos */
-  --color-bg-primary: #010310;
-  --color-bg-secondary: #0A1628;
-  --color-bg-card: #0F1F3D;
-  --color-bg-light: #F8FAFC;
-
-  /* Textos */
+  /* Texto */
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #B0C4DE;
   --color-text-muted: #6B8BA4;
-  --color-text-dark: #010310;
+
+  /* Fondos */
+  --color-bg-primary: var(--color-navy-950);
+  --color-bg-secondary: var(--color-navy-900);
+  --color-bg-card: #0F1F3D;
+  --color-bg-light: #F8FAFC;
 
   /* Estados */
-  --color-hover: #4DC9DD;
-  --color-active: #1A8A9E;
+  --color-hover: var(--color-cyan-400);
+  --color-active: var(--color-cyan-600);
   --color-focus: #23A9BD66;
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
 
   /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, #23A9BD 0%, #010310 100%);
-  --gradient-accent: linear-gradient(135deg, #23A9BD 0%, #4DC9DD 100%);
-  --gradient-hero: linear-gradient(135deg, #010310 0%, #0A1628 50%, #1A8A9E 100%);
-  --gradient-cta: linear-gradient(135deg, #23A9BD 0%, #4DC9DD 100%);
-  --gradient-glow: radial-gradient(circle at center, #23A9BD33 0%, transparent 70%);
-  --gradient-card: linear-gradient(145deg, #0A1628 0%, #010310 100%);
+  --gradient-primary: linear-gradient(135deg, var(--color-cyan-500) 0%, var(--color-navy-950) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-cyan-500) 0%, var(--color-cyan-400) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 50%, var(--color-cyan-600) 100%);
+  --gradient-cta: linear-gradient(135deg, var(--color-cyan-500) 0%, var(--color-cyan-400) 100%);
+  --gradient-glow: radial-gradient(circle at center, var(--color-accent-glow) 0%, transparent 70%);
+  --gradient-card: linear-gradient(145deg, var(--color-navy-900) 0%, var(--color-navy-950) 100%);
 
   /* Sombras */
-  --shadow-glow: 0 0 30px -5px #23A9BD33;
-  --shadow-glow-lg: 0 0 60px -10px #23A9BD55;
-  --shadow-card: 0 10px 40px -10px #01031055;
-  --shadow-card-hover: 0 20px 60px -10px #01031077;
+  --shadow-glow-cyan: 0 0 30px -5px #23A9BD33;
+  --shadow-glow-cyan-lg: 0 0 60px -10px #23A9BD55;
+  --shadow-glow-cyan-sm: 0 0 15px -3px #23A9BD22;
+  --shadow-card: 0 10px 40px -10px var(--color-navy-950);
+  --shadow-card-hover: 0 20px 60px -10px var(--color-navy-950);
 
   /* Tipografía */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
 }
 
-/* Tema Oscuro (por defecto) */
 [data-theme="dark"] {
-  --color-bg-primary: #010310;
-  --color-bg-secondary: #0A1628;
+  --color-bg-primary: var(--color-navy-950);
+  --color-bg-secondary: var(--color-navy-900);
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #B0C4DE;
 }
 
-/* Tema Claro (para secciones alternas) */
 [data-theme="light"] {
   --color-bg-primary: #F8FAFC;
   --color-bg-secondary: #FFFFFF;
-  --color-text-primary: #010310;
-  --color-text-secondary: #0A1628;
+  --color-text-primary: var(--color-navy-950);
+  --color-text-secondary: var(--color-navy-900);
 }

@@ -1,0 +1,66 @@
+---
+// src/components/sections/Hero.astro
+---
+
+<section class="min-h-screen flex items-center pt-16 md:pt-20 bg-gradient-hero relative overflow-hidden">
+  <!-- Efectos decorativos de fondo -->
+  <div class="absolute inset-0 bg-gradient-glow opacity-30"></div>
+  <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+  
+  <!-- Contenido -->
+  <div class="container-custom relative z-10">
+    <div class="max-w-4xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 badge-cyan mb-6 animate-fade-in">
+        <span class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
+        Innovación tecnológica
+      </div>
+
+      <!-- Título -->
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-slide-up">
+        Transformamos tu negocio con
+        <span class="text-gradient-accent">tecnología</span>
+        de vanguardia
+      </h1>
+
+      <!-- Descripción -->
+      <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl animate-slide-up [animation-delay:200ms]">
+        En Uny Solutions creamos soluciones digitales innovadoras que impulsan el crecimiento de tu empresa en la era digital.
+      </p>
+
+      <!-- Botones CTA -->
+      <div class="flex flex-wrap gap-4 animate-slide-up [animation-delay:400ms]">
+        <a href="/contact" class="btn-primary text-base md:text-lg group">
+          Comenzar proyecto
+          <svg class="inline-block w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="/services" class="btn-secondary text-base md:text-lg">
+          Ver servicios
+        </a>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="flex flex-wrap gap-6 md:gap-10 mt-12 pt-8 border-t border-cyan-500/10 animate-fade-in [animation-delay:600ms]">
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-cyan-400">50+</div>
+          <div class="text-gray-400 text-sm">Proyectos completados</div>
+        </div>
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-cyan-400">98%</div>
+          <div class="text-gray-400 text-sm">Satisfacción cliente</div>
+        </div>
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-cyan-400">4.9</div>
+          <div class="text-gray-400 text-sm">Calificación promedio</div>
+        </div>
+        <div>
+          <div class="text-2xl md:text-3xl font-bold text-cyan-400">24/7</div>
+          <div class="text-gray-400 text-sm">Soporte técnico</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
