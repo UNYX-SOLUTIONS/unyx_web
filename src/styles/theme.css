@@ -1,0 +1,64 @@
+/* Tema principal de Uny Solutions */
+:root {
+  /* Colores Base - Navy + Cyan */
+  --color-primary: #010310;
+  --color-secondary: #0A1628;
+  --color-accent: #23A9BD;
+  --color-accent-light: #4DC9DD;
+  --color-accent-dark: #1A8A9E;
+  --color-accent-glow: #23A9BD33;
+
+  /* Fondos */
+  --color-bg-primary: #010310;
+  --color-bg-secondary: #0A1628;
+  --color-bg-card: #0F1F3D;
+  --color-bg-light: #F8FAFC;
+
+  /* Textos */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B0C4DE;
+  --color-text-muted: #6B8BA4;
+  --color-text-dark: #010310;
+
+  /* Estados */
+  --color-hover: #4DC9DD;
+  --color-active: #1A8A9E;
+  --color-focus: #23A9BD66;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #23A9BD 0%, #010310 100%);
+  --gradient-accent: linear-gradient(135deg, #23A9BD 0%, #4DC9DD 100%);
+  --gradient-hero: linear-gradient(135deg, #010310 0%, #0A1628 50%, #1A8A9E 100%);
+  --gradient-cta: linear-gradient(135deg, #23A9BD 0%, #4DC9DD 100%);
+  --gradient-glow: radial-gradient(circle at center, #23A9BD33 0%, transparent 70%);
+  --gradient-card: linear-gradient(145deg, #0A1628 0%, #010310 100%);
+
+  /* Sombras */
+  --shadow-glow: 0 0 30px -5px #23A9BD33;
+  --shadow-glow-lg: 0 0 60px -10px #23A9BD55;
+  --shadow-card: 0 10px 40px -10px #01031055;
+  --shadow-card-hover: 0 20px 60px -10px #01031077;
+
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+/* Tema Oscuro (por defecto) */
+[data-theme="dark"] {
+  --color-bg-primary: #010310;
+  --color-bg-secondary: #0A1628;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B0C4DE;
+}
+
+/* Tema Claro (para secciones alternas) */
+[data-theme="light"] {
+  --color-bg-primary: #F8FAFC;
+  --color-bg-secondary: #FFFFFF;
+  --color-text-primary: #010310;
+  --color-text-secondary: #0A1628;
+}
