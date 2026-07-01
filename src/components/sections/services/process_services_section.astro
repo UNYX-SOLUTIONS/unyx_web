@@ -1,0 +1,51 @@
+---
+// src/components/sections/services/ServicesProcess.astro
+import { processSteps } from '../../../data/services.js';
+---
+
+<section class="py-16 md:py-24 bg-brand-primary w-full">
+  <div class="container">
+    <!-- Encabezado -->
+    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+      <span class="badge-cyan mb-4">Cómo trabajamos</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+        Nuestro <span class="text-gradient-accent">proceso</span> de trabajo
+      </h2>
+      <p class="text-gray-300 text-lg">
+        Un método probado que garantiza resultados excepcionales en cada proyecto.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Línea vertical -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-cyan-500/20 hidden md:block"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {
+          processSteps.map((step, index) => (
+            <div class={`relative ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12 md:col-start-2'}`}>
+              <!-- Círculo conector -->
+              <div class="hidden md:block absolute top-1/2 transform -translate-y-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-brand-primary shadow-glow-cyan">
+              </div>
+
+              <div class={`card-gradient p-6 md:p-8 hover:shadow-glow-cyan transition-all duration-300 ${index % 2 === 0 ? 'md:mr-4' : 'md:ml-4'}`}>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-4xl font-bold text-cyan-500/20 font-display">
+                    {step.step}
+                  </span>
+                  <h3 class="text-white text-xl font-semibold">
+                    {step.title}
+                  </h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
