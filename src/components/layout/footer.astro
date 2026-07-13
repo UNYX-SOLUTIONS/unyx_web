@@ -4,20 +4,23 @@ import { navigation } from '../../data/navigation.js';
 ---
 
 <footer class="bg-brand-secondary border-t border-cyan-500/10 relative overflow-hidden">
-  <div class=" container">
+  <!-- Efecto decorativo sutil -->
+  <div class="absolute inset-0 bg-gradient-glow opacity-5"></div>
+  
+  <div class="container relative z-10">
     <div class="py-12 md:py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         <!-- Columna 1: Logo y descripción -->
         <div class="lg:col-span-1">
-          <a href="/" class="flex items-center gap-2 mb-4 group">
-            <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span class="text-white font-display font-bold text-xl">U</span>
-            </div>
-            <span class="font-display font-bold text-xl text-white group-hover:text-cyan-400 transition-colors">
-              Unyx Solutions
-            </span>
+          <a href="/" class="inline-block mb-4 group">
+            <!-- ✅ Logo con imagen SVG -->
+            <img 
+              src="/logo.png" 
+              alt="Unyx Solutions" 
+              class="w-10 h-10 md:w-15 md:h-15 lg:w-20 lg:h-20 transition-transform duration-300 group-hover:scale-110"
+            />
           </a>
-          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm mt-2">
             Soluciones tecnológicas innovadoras para impulsar el crecimiento de tu negocio en la era digital.
           </p>
           <div class="flex gap-4 mt-4">
@@ -121,7 +124,7 @@ import { navigation } from '../../data/navigation.js';
       <!-- Copyright -->
       <div class="mt-12 pt-8 border-t border-cyan-500/10 text-center">
         <p class="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Unyx Solutions. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} Uny Solutions. Todos los derechos reservados.
         </p>
       </div>
     </div>
