@@ -2,7 +2,9 @@
 // src/components/sections/hero_home_section.astro
 ---
 
-<section class="hero-section bg-gradient-hero relative overflow-hidden">
+<section
+  class="hero-section bg-gradient-hero relative overflow-hidden h-screen"
+>
   <!-- ✅ Imagen de fondo local -->
   <div class="absolute inset-0 z-0">
     <img
@@ -27,75 +29,136 @@
   <div
     class="relative z-10 container flex flex-col items-center justify-center"
   >
-    <div class="max-w-4xl flex flex-col items-center justify-center text-center gap-8">
+    <div
+      class="max-w-5xl flex flex-col items-center justify-center text-center gap-8"
+    >
+      <div
+        class="max-w-3xl flex flex-col items-center justify-center text-center gap-5"
+      >
+        <div class="inline-flex items-center gap-2 mb-6 animate-fade-in">
+          <span class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
+          Bienvenido a Unyx Solutions
+        </div>
+
+        <!-- Título -->
+        <h1
+          class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 animate-slide-up"
+        >
+          Integraciónes y
+          <span class="text-gradient-accent">soluciones</span>
+          completas para tu empresa
+        </h1>
+
+        <!-- Descripción -->
+        <p
+          class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl animate-slide-up [animation-delay:200ms]"
+        >
+          CRM, ERP, IA, redes, capacitaciones, asesorías y soporte que impulsan
+          tu productividad y eficiencia empresarial.
+        </p>
+
+        <!-- Botones CTA -->
+        <div
+          class="flex flex-wrap gap-4 animate-slide-up [animation-delay:400ms]"
+        >
+          <a href="/contact" class="btn-primary text-base md:text-lg group">
+            Solicita tu asesoría gratuita
+            <svg
+              class="inline-block w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a href="/services" class="btn-secondary text-base md:text-lg">
+            Ver servicios
+          </a>
+        </div>
+
+        <!-- Estadísticas -->
+        <div
+          class="flex flex-wrap gap-6 md:gap-10 mt-12 pt-8 border-t border-cyan-500/10 animate-fade-in [animation-delay:600ms]"
+        >
+          <div>
+            <div class="text-2xl md:text-3xl font-bold text-cyan-400">50+</div>
+            <div class="text-gray-400 text-sm">Proyectos completados</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-bold text-cyan-400">98%</div>
+            <div class="text-gray-400 text-sm">Satisfacción cliente</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-bold text-cyan-400">4.9</div>
+            <div class="text-gray-400 text-sm">Calificación promedio</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-bold text-cyan-400">24/7</div>
+            <div class="text-gray-400 text-sm">Soporte técnico</div>
+          </div>
+        </div>
+      </div>
       <!-- Badge -->
-      <div
-        class="inline-flex items-center gap-2 mb-6 animate-fade-in"
-      >
-        <span class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
-        Bienvenido a Unyx Solutions
-      </div>
 
-      <!-- Título -->
-      <h1
-        class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 animate-slide-up"
-      >
-        Integraciónes y
-        <span class="text-gradient-accent">soluciones</span>
-        completas para tu empresa
-      </h1>
-
-      <!-- Descripción -->
-      <p
-        class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl animate-slide-up [animation-delay:200ms]"
-      >
-        CRM, ERP, IA, redes, capacitaciones, asesorías y soporte que impulsan tu
-        productividad y eficiencia empresarial.
-      </p>
-
-      <!-- Botones CTA -->
-      <div
-        class="flex flex-wrap gap-4 animate-slide-up [animation-delay:400ms]"
-      >
-        <a href="/contact" class="btn-primary text-base md:text-lg group">
-          Solicita tu asesoría gratuita
-          <svg
-            class="inline-block w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+      <!-- Pequeños textos que describen servicios con links abajo para ir a otras secciones -->
+      <div class="grid grid-cols-3 gap-8 h-full max-w-6xl mx-auto w-full">
+        <!-- Bloque 1 -->
+        <div
+          class="bg-transparent rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-cyan-500 h-full w-full"
+        >
+          <p
+            class="text-md leading-relaxed text-gray-900 font-normal mb-3 text-white"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-          </svg>
-        </a>
-        <a href="/services" class="btn-secondary text-base md:text-lg">
-          Ver servicios
-        </a>
-      </div>
+            Transformamos tu infraestructura<br />
+            con soluciones escalables y seguras
+          </p>
+          <a
+            href="#soluciones"
+            class="inline-block text-base font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 hover:translate-x-1.5 border-b-2 border-transparent hover:border-blue-600 pb-0.5"
+          >
+            Conocer más —
+          </a>
+        </div>
 
-      <!-- Estadísticas -->
-      <div
-        class="flex flex-wrap gap-6 md:gap-10 mt-12 pt-8 border-t border-cyan-500/10 animate-fade-in [animation-delay:600ms]"
-      >
-        <div>
-          <div class="text-2xl md:text-3xl font-bold text-cyan-400">50+</div>
-          <div class="text-gray-400 text-sm">Proyectos completados</div>
+        <!-- Bloque 2 -->
+        <div
+          class="bg-transparent rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-cyan-500"
+        >
+          <p
+            class="text-md leading-relaxed text-gray-900 font-normal mb-3 text-white"
+          >
+            Automatización inteligente<br />
+            para optimizar tus procesos
+          </p>
+          <a
+            href="#automatizacion"
+            class="inline-block text-base font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 hover:translate-x-1.5 border-b-2 border-transparent hover:border-blue-600 pb-0.5"
+          >
+            Conocer más —
+          </a>
         </div>
-        <div>
-          <div class="text-2xl md:text-3xl font-bold text-cyan-400">98%</div>
-          <div class="text-gray-400 text-sm">Satisfacción cliente</div>
-        </div>
-        <div>
-          <div class="text-2xl md:text-3xl font-bold text-cyan-400">4.9</div>
-          <div class="text-gray-400 text-sm">Calificación promedio</div>
-        </div>
-        <div>
-          <div class="text-2xl md:text-3xl font-bold text-cyan-400">24/7</div>
-          <div class="text-gray-400 text-sm">Soporte técnico</div>
+
+        <!-- Bloque 3 -->
+        <div
+          class="bg-transparent rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-cyan-500"
+        >
+          <p
+            class="text-md leading-relaxed text-gray-900 font-normal mb-3 text-white"
+          >
+            Consultoría y asesoría<br />
+            en transformación digital
+          </p>
+          <a
+            href="#consultoria"
+            class="inline-block text-base font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 hover:translate-x-1.5 border-b-2 border-transparent hover:border-blue-600 pb-0.5"
+          >
+            Conocer más —
+          </a>
         </div>
       </div>
     </div>
