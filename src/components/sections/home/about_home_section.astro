@@ -10,19 +10,6 @@
   <div class="container relative z-10">
     <!-- Encabezado -->
     <div class="text-center max-w-6xl mx-auto mb-12">
-      <!-- Badge superior -->
-      <div class="flex justify-center mb-4">
-        <span
-          class="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase"
-          style="color: var(--color-accent);"
-        >
-          <span
-            class="w-1.5 h-1.5 rounded-full"
-            style="background: var(--color-accent);"></span>
-          Sobre nosotros
-        </span>
-      </div>
-
       <!-- Línea + Título + Línea -->
       <div class="flex items-center justify-center gap-6">
         <!-- Línea izquierda -->
@@ -53,14 +40,14 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="text-start flex flex-col items-center gap-40 py-28!">
         <div class="max-w-md">
-          <p class="text-gray-400 text-sm">
+          <p class="text-gray-300 text-md">
             Somos un equipo de expertos apasionados por la tecnología, dedicados
             a impulsar el crecimiento de tu negocio a través de soluciones
             innovadoras y personalizadas.
           </p>
         </div>
         <div class="max-w-md">
-          <p class="text-gray-400 text-sm">
+          <p class="text-gray-300 text-md">
             Con años de experiencia en el sector, hemos ayudado a empresas de
             todos los tamaños a transformar sus operaciones y alcanzar sus
             objetivos.
@@ -73,43 +60,22 @@
       >
         <div class="absolute inset-0 bg-gradient-glow opacity-5"></div>
 
-        <div class="container relative z-10">
-          <!-- Título -->
-          <div class="text-center max-w-4xl mx-auto mb-16">
-            <div class="flex items-center justify-center gap-6">
-              <div
-                class="hidden sm:block flex-1 max-w-20 h-px"
-                style="background: linear-gradient(to right, transparent, var(--color-accent));"
-              >
-              </div>
-              <h2
-                class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
-              >
-                Nuestro <span class="text-gradient-accent">Proceso</span>
-              </h2>
-              <div
-                class="hidden sm:block flex-1 max-w-20 h-px"
-                style="background: linear-gradient(to left, transparent, var(--color-accent));"
-              >
-              </div>
-            </div>
-          </div>
-
+        <div class="container relative z-10 py-20!">
           <!-- Línea de tiempo -->
           <div class="relative max-w-5xl mx-auto">
             <!-- Línea vertical -->
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5"
+              class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5!"
               style="background: linear-gradient(to bottom, transparent, var(--color-accent) 20%, var(--color-accent) 80%, transparent);"
             >
             </div>
 
             <!-- Item 1 -->
             <div
-              class="relative flex flex-col md:flex-row items-center gap-8 mb-16 md:mb-20"
+              class="relative flex flex-col md:flex-row items-center gap-8 mb-10! md:mb-16!"
             >
               <!-- Imagen izquierda -->
-              <div class="md:w-5/12 order-2 md:order-1">
+              <div class="md:w-5/12! order-2 md:order-1!">
                 <div
                   class="relative rounded-2xl overflow-hidden border border-cyan-500/10 group hover:border-cyan-500/30 transition-all duration-300"
                 >
@@ -128,7 +94,7 @@
               <!-- Punto con número -->
               <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
                 <div
-                  class="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold"
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
                   style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
                 >
                   01
@@ -137,7 +103,7 @@
 
               <!-- Texto derecho -->
               <div
-                class="md:w-5/12 order-1 md:order-2 text-center md:text-left"
+                class="md:w-5/12 order-1 md:order-2 text-center md:text-left ml-16!"
               >
                 <span
                   class="text-sm font-medium tracking-wider uppercase"
@@ -155,10 +121,10 @@
 
             <!-- Item 2 -->
             <div
-              class="relative flex flex-col md:flex-row items-center gap-8 mb-16 md:mb-20"
+              class="relative flex flex-col md:flex-row items-center gap-8 mb-10! md:mb-16!"
             >
               <!-- Texto izquierdo -->
-              <div class="md:w-5/12 text-center md:text-right">
+              <div class="md:w-5/12 text-center md:text-right mr-16!">
                 <span
                   class="text-sm font-medium tracking-wider uppercase"
                   style="color: var(--color-accent);">Paso 2</span
@@ -175,7 +141,7 @@
               <!-- Punto con número -->
               <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
                 <div
-                  class="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold"
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
                   style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
                 >
                   02
@@ -222,7 +188,7 @@
               <!-- Punto con número -->
               <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
                 <div
-                  class="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold"
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
                   style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
                 >
                   03
@@ -231,7 +197,7 @@
 
               <!-- Texto derecho -->
               <div
-                class="md:w-5/12 order-1 md:order-2 text-center md:text-left"
+                class="md:w-5/12 order-1 md:order-2 text-center md:text-left ml-16!"
               >
                 <span
                   class="text-sm font-medium tracking-wider uppercase"
