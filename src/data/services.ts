@@ -9,6 +9,8 @@ export interface Service {
   benefits: string[];
   technologies: string[];
   price?: string;
+  image?: string; // ✅ Campo para la imagen de fondo
+  category?: string; // ✅ Campo para categoría (opcional)
 }
 
 export const services: Service[] = [
@@ -32,7 +34,9 @@ export const services: Service[] = [
       'Escalabilidad garantizada'
     ],
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
-    price: 'Desde $5,000'
+    price: 'Desde $5,000',
+    image: '/servicio1.png', // ✅ Imagen para el card
+    category: 'Desarrollo' // ✅ Categoría
   },
   {
     id: 'mobile-apps',
@@ -54,7 +58,9 @@ export const services: Service[] = [
       'Publicación en App Store y Google Play'
     ],
     technologies: ['React Native', 'Swift', 'Kotlin', 'Flutter', 'Firebase'],
-    price: 'Desde $8,000'
+    price: 'Desde $8,000',
+    image: '/servicio2.jpg',
+    category: 'Mobile'
   },
   {
     id: 'cloud-solutions',
@@ -76,7 +82,9 @@ export const services: Service[] = [
       'Disponibilidad garantizada'
     ],
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'],
-    price: 'Desde $3,000'
+    price: 'Desde $3,000',
+    image: '/servicio4.jpg',
+    category: 'Infraestructura'
   },
   {
     id: 'ai-ml',
@@ -98,7 +106,9 @@ export const services: Service[] = [
       'Ventaja competitiva'
     ],
     technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'Scikit-learn'],
-    price: 'Desde $10,000'
+    price: 'Desde $10,000',
+    image: '/servicio5.jpg',
+    category: 'Inteligencia Artificial'
   },
   {
     id: 'ux-ui',
@@ -120,7 +130,9 @@ export const services: Service[] = [
       'Diferenciación en el mercado'
     ],
     technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin'],
-    price: 'Desde $4,000'
+    price: 'Desde $4,000',
+    image: '/servicio7.png',
+    category: 'Diseño'
   },
   {
     id: 'consulting',
@@ -142,7 +154,9 @@ export const services: Service[] = [
       'Innovación continua'
     ],
     technologies: ['Agile', 'DevOps', 'Cloud Architecture', 'Digital Strategy'],
-    price: 'Desde $2,500'
+    price: 'Desde $2,500',
+    image: '/servicio6.jpg',
+    category: 'Consultoría'
   }
 ];
 
