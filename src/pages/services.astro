@@ -1,0 +1,18 @@
+---
+// src/pages/services.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/header.astro';
+import Footer from '../components/layout/footer.astro';
+import { ServicesHero, ServicesList, ServicesProcess, ServicesCTA } from '../components/sections/services/index_services.astro';
+---
+
+<Layout title="Servicios | Unyx Solutions">
+  <Header />
+  <main>
+    <ServicesHero />
+    <ServicesList />
+    <ServicesProcess />
+    <ServicesCTA />
+  </main>
+  <Footer />
+</Layout>

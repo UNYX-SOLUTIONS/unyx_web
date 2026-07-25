@@ -1,0 +1,19 @@
+---
+// src/pages/contact.astro
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/layout/header.astro";
+import Footer from "../components/layout/footer.astro";
+import { ContactCTA, ContactFAQ, ContactForm, ContactHero, ContactInfo } from "../components/sections/contact/index_contact.astro";
+---
+
+<Layout title="contact">
+  <Header />
+  <main>
+    <ContactHero />
+    <ContactInfo />
+    <ContactForm />
+    <ContactFAQ />
+    <ContactCTA />
+  </main>
+  <Footer />
+</Layout>

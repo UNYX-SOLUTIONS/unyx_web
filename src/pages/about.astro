@@ -1,0 +1,27 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/header.astro';
+import Footer from '../components/layout/footer.astro';
+import { 
+  AboutHero, 
+  AboutStory, 
+  AboutValues, 
+  AboutStats, 
+  AboutTeam, 
+  AboutCTA 
+} from '../components/sections/about/index_about.astro';
+---
+
+<Layout title="Sobre Nosotros | Unyx Solutions">
+  <Header />
+  <main>
+    <AboutHero />
+    <AboutStory />
+    <AboutValues />
+    <AboutStats />
+    <AboutTeam />
+    <AboutCTA />
+  </main>
+  <Footer />
+</Layout>

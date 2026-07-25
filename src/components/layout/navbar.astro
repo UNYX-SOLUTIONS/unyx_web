@@ -1,0 +1,219 @@
+---
+// src/components/layout/Navbar.astro
+// Definimos los items de navegación
+const navItems = [
+  { href: "/", label: "Inicio" },
+  { href: "/services", label: "Servicios" },
+  { href: "/about", label: "Nosotros" },
+  { href: "/contact", label: "Contacto" },
+];
+---
+
+<nav 
+  id="navbar"
+  class="fixed top-0 left-0 right-0 transition-all duration-500 flex items-center! justify-center! bg-transparent "
+>
+  <!-- Línea decorativa inferior -->
+  <div class="absolute z-50 bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent" />
+  
+  <div class="container px-4 w-full max-w-7xl py-3!">
+    <div class="flex justify-between items-center py-2">
+      <!-- Menú Mobile Button -->
+      <button
+        id="menuButton"
+        class="md:hidden p-2! rounded-lg hover:bg-gray-800 transition-all"
+        aria-label="Menú"
+        aria-expanded="false"
+      >
+        <!-- Ícono menú (estilo navbar2 con texto dinámico) -->
+        <svg id="menuIcon" class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="closeIcon" class="w-5 h-5 text-gray-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Contenedor del menú centrado (Desktop) -->
+      <div class="hidden md:flex items-center! justify-center! relative left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-gray-950/50 rounded-xl shadow-lg w-full max-w-md py-2!">
+        <div class="flex items-center! justify-center! gap-10 w-full">
+          {
+            navItems.map((item) => (
+              <a
+                href={item.href}
+                class="flex items-center! justify-center! text-gray-200 hover:text-white gap-2 py-2! transition-all duration-300 font-medium hover:scale-105"
+              >
+                <span>{item.label}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Menú Mobile (estilo navbar2) -->
+      <div id="mobileMenu" class="md:hidden hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-lg border-t border-gray-800 shadow-xl animate-in fade-in slide-in-from-top-2 duration-300">
+        <div class="container mx-auto px-4 py-4">
+          <div class="flex flex-col space-y-2">
+            {
+              navItems.map((item) => (
+                <a
+                  href={item.href}
+                  class="flex items-center text-gray-200 hover:text-white gap-2 py-2 px-4 transition-all duration-300 font-medium hover:scale-105"
+                >
+                  <span>{item.label}</span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Estado del menú
+  let isOpen = false;
+
+  // Elementos del DOM
+  const menuButton = document.getElementById('menuButton');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeIcon = document.getElementById('closeIcon');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const navbar = document.getElementById('navbar');
+
+  // Función para alternar el menú
+  function toggleMenu() {
+    isOpen = !isOpen;
+    
+    if (isOpen) {
+      mobileMenu?.classList.remove('hidden');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      menuButton?.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu?.classList.add('hidden');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      menuButton?.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  // Event listener para el botón del menú
+  menuButton?.addEventListener('click', toggleMenu);
+
+  // Cerrar menú al hacer click en un enlace
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (isOpen) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Cerrar menú al cambiar tamaño de pantalla (igual que navbar2)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768 && isOpen) {
+      toggleMenu();
+    }
+  });
+
+  // Efecto de cambio de color al hacer scroll (igual que navbar2)
+  function isDarkBackground(sectionId: string) {
+    const darkSections = ['hero', 'about', 'services', 'contact'];
+    return darkSections.includes(sectionId);
+  }
+
+  function getCurrentSection() {
+    const sections = document.querySelectorAll('section[id]');
+    let currentSection = null;
+    
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 100 && rect.bottom >= 100) {
+        currentSection = section.id;
+      }
+    });
+    
+    return currentSection;
+  }
+
+  function updateTextColor() {
+    const currentSection = getCurrentSection();
+    const links = document.querySelectorAll('#navbar a:not(.btn-primary)');
+    const menuIcons = document.querySelectorAll('#menuButton svg');
+    
+    if (currentSection && isDarkBackground(currentSection)) {
+      links.forEach((link) => {
+        link.classList.remove('text-gray-900');
+        link.classList.add('text-gray-300');
+      });
+      menuIcons.forEach((icon) => {
+        icon.classList.remove('text-gray-900');
+        icon.classList.add('text-gray-300');
+      });
+    } else {
+      links.forEach((link) => {
+        link.classList.remove('text-gray-300');
+        link.classList.add('text-gray-900');
+      });
+      menuIcons.forEach((icon) => {
+        icon.classList.remove('text-gray-300');
+        icon.classList.add('text-gray-900');
+      });
+    }
+  }
+
+  // Escuchar scroll
+  window.addEventListener('scroll', updateTextColor);
+
+  // Ejecutar al cargar
+  setTimeout(updateTextColor, 100);
+</script>
+
+<style>
+  /* Estilos de animación (igual que navbar2) */
+  .animate-in {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+  
+  .fade-in {
+    animation-name: fadeIn;
+  }
+  
+  .slide-in-from-top-2 {
+    animation-name: slideInFromTop;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Estilo hover para los links (igual que navbar2) */
+  #navbar a:hover {
+    transform: scale(1.05);
+  }
+
+  /* Transición suave para el menú mobile (igual que navbar2) */
+  #mobileMenu {
+    transition: all 0.3s ease-in-out;
+  }
+</style>

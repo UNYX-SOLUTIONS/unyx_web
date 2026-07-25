@@ -1,0 +1,32 @@
+---
+// src/components/sections/about/AboutHero.astro
+---
+
+<section class="hero-section bg-gradient-hero relative overflow-hidden">
+  <!-- Efectos decorativos -->
+  <div class="absolute inset-0 bg-gradient-glow opacity-30"></div>
+  <div class="absolute top-20 left-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl"></div>
+  
+  <div class="container relative z-10 flex flex-col items-center text-center">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 badge-cyan mb-6 animate-fade-in">
+        <span class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
+        Conócenos
+      </div>
+
+      <!-- Título -->
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-up">
+        Innovando el futuro con
+        <span class="text-gradient-accent">tecnología y pasión</span>
+      </h1>
+
+      <!-- Descripción -->
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up [animation-delay:200ms]">
+        Somos un equipo de expertos apasionados por la tecnología, comprometidos con transformar 
+        negocios y crear soluciones que impactan positivamente en la vida de las personas.
+      </p>
+    </div>
+  </div>
+</section>

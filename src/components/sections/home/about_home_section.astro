@@ -1,0 +1,264 @@
+---
+// src/components/sections/About.astro
+---
+
+<section
+  class="py-16! md:py-16! bg-brand-primary relative overflow-hidden w-full"
+>
+  <div class="absolute inset-0 bg-gradient-glow opacity-5"></div>
+
+  <div class="container relative z-10">
+    <!-- Encabezado -->
+    <div class="text-center mb-12!">
+      <!-- Línea + Título + Línea -->
+      <div class="flex items-center justify-center gap-6">
+        <!-- Línea izquierda -->
+        <div
+          class="hidden sm:block flex-1 max-w-80 h-px"
+          style="background: linear-gradient(to right, transparent, var(--color-accent));"
+        >
+        </div>
+
+        <h2
+          class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight whitespace-nowrap"
+        >
+          Sobre
+          <span class="text-gradient-accent">Unyx</span>
+          Solutions
+        </h2>
+
+        <!-- Línea derecha -->
+        <div
+          class="hidden sm:block flex-1 max-w-80 h-px"
+          style="background: linear-gradient(to left, transparent, var(--color-accent));"
+        >
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilares -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div
+        class="text-start flex flex-col items-center justify-center gap-40 py-28!"
+      >
+        <div class="max-w-md flex flex-col gap-2">
+          <p class="text-gray-300 text-md">
+            Somos un equipo de expertos apasionados por la tecnología, dedicados
+            a impulsar el crecimiento de tu negocio a través de soluciones
+            innovadoras y personalizadas.
+          </p>
+          <!-- CTA -->
+          <div class="text-start!">
+            <a
+              href="/about"
+              class="inline-flex items-center gap-2 text-cyan-300! hover:text-cyan-200! font-medium transition-colors group"
+            >
+              Conoce más sobre nosotros
+              <svg
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="max-w-md flex flex-col gap-2">
+          <p class="text-gray-300 text-md">
+            Con años de experiencia en el sector, hemos ayudado a empresas de
+            todos los tamaños a transformar sus operaciones y alcanzar sus
+            objetivos.
+          </p>
+          <!-- CTA -->
+          <div class="text-start!">
+            <a
+              href="/about"
+              class="inline-flex items-center gap-2 text-cyan-300! hover:text-cyan-200! font-medium transition-colors group"
+            >
+              Conoce nuestros casos de éxito
+              <svg
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="py-16 md:py-24 bg-brand-primary relative overflow-hidden w-full"
+      >
+        <div class="absolute inset-0 bg-gradient-glow opacity-5"></div>
+
+        <div class="container relative z-10 py-20!">
+          <!-- Línea de tiempo -->
+          <div class="relative max-w-5xl mx-auto">
+            <!-- Línea vertical -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5!"
+              style="background: linear-gradient(to bottom, transparent, var(--color-accent) 20%, var(--color-accent) 80%, transparent);"
+            >
+            </div>
+
+            <!-- Item 1 -->
+            <div
+              class="relative flex flex-col md:flex-row items-center gap-8 mb-10! md:mb-16!"
+            >
+              <!-- Imagen izquierda -->
+              <div class="md:w-5/12! order-2 md:order-1!">
+                <div
+                  class="relative rounded-2xl overflow-hidden border border-cyan-100/40! group hover:border-cyan-400/70! transition-all duration-300"
+                >
+                  <div
+                    class="aspect-video bg-gradient-hero rounded-xl flex items-center justify-center p-1"
+                  >
+                    <img
+                      src="/foto1.jpeg"
+                      alt="Descubrimiento"
+                      class="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Punto con número -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
+                  style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
+                >
+                  01
+                </div>
+              </div>
+
+              <!-- Texto derecho -->
+              <div
+                class="md:w-5/12 order-1 md:order-2 text-center md:text-left ml-16!"
+              >
+                <span
+                  class="text-sm font-medium tracking-wider uppercase"
+                  style="color: var(--color-accent);">Paso 1</span
+                >
+                <h3 class="text-xl md:text-2xl font-bold text-white mt-2!">
+                  Descubrimiento
+                </h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                  Analizamos tus necesidades, objetivos y desafíos para entender
+                  a fondo tu negocio.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div
+              class="relative flex flex-col md:flex-row items-center gap-8 mb-10! md:mb-16!"
+            >
+              <!-- Texto izquierdo -->
+              <div class="md:w-5/12 text-center md:text-right mr-16!">
+                <span
+                  class="text-sm font-medium tracking-wider uppercase"
+                  style="color: var(--color-accent);">Paso 2</span
+                >
+                <h3 class="text-xl md:text-2xl font-bold text-white mt-2!">
+                  Estrategia
+                </h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                  Diseñamos una estrategia personalizada con la mejor tecnología
+                  para tu caso.
+                </p>
+              </div>
+
+              <!-- Punto con número -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
+                  style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
+                >
+                  02
+                </div>
+              </div>
+
+              <!-- Imagen derecha -->
+              <div class="md:w-5/12">
+                <div
+                  class="relative rounded-2xl overflow-hidden border border-cyan-100/40! group hover:border-cyan-400/70! transition-all duration-300"
+                >
+                  <div
+                    class="aspect-video bg-gradient-hero rounded-xl flex items-center justify-center p-1"
+                  >
+                    <img
+                      src="/foto2.jpg"
+                      alt="Estrategia"
+                      class="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="relative flex flex-col md:flex-row items-center gap-8">
+              <!-- Imagen izquierda -->
+              <div class="md:w-5/12 order-2 md:order-1">
+                <div
+                  class="relative rounded-2xl overflow-hidden border border-cyan-100/40! group hover:border-cyan-400/70! transition-all duration-300"
+                >
+                  <div
+                    class="aspect-video bg-gradient-hero rounded-xl flex items-center justify-center p-1"
+                  >
+                    <img
+                      src="/foto3.jpg"
+                      alt="Desarrollo"
+                      class="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Punto con número -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-md font-bold"
+                  style="background: var(--gradient-accent); color: var(--color-text-primary); box-shadow: var(--shadow-glow-cyan);"
+                >
+                  03
+                </div>
+              </div>
+
+              <!-- Texto derecho -->
+              <div
+                class="md:w-5/12 order-1 md:order-2 text-center md:text-left ml-16!"
+              >
+                <span
+                  class="text-sm font-medium tracking-wider uppercase"
+                  style="color: var(--color-accent);">Paso 3</span
+                >
+                <h3 class="text-xl md:text-2xl font-bold text-white mt-2!">
+                  Desarrollo
+                </h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                  Construimos tu solución con metodologías ágiles y los más
+                  altos estándares.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
